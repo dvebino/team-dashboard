@@ -57,6 +57,15 @@ const App = () => {
               <Route path="/editor" element="Editor"/>
               <Route path="/calendar" element="Calendar"/>
               <Route path="/color-theme" element="ColorTheme"/>
+
+              <Route path="/line" element="Chart"/>
+              <Route path="/area" element="Chart" />
+              <Route path="/bar" element="Chart" />
+              <Route path="/pie" element="Chart" />
+              <Route path="/financial" element="Chart" />
+              <Route path="/color-mapping" element="Chart" />
+              <Route path="/pyramid" element="Chart" />
+              <Route path="/stacked" element="Chart" />
             </Routes>
           </div>
         </div>
