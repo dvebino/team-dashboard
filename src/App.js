@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import { Navbar, Foot, Sidebar, Themes } from "./components";
+import { Navbar, Footer, Sidebar, Themes } from "./components";
 import {
   Ecommerce,
   Orders,
@@ -14,17 +14,17 @@ import {
   Kanban,
   Area,
   Bar,
-  Pie,
+  PieChart,
   Financial,
-  ColorTheme,
   ColorMapping,
+  ColorTheme,
   Editor,
+  Line,
 } from "./pages";
 import "./App.css";
 
 const App = () => {
-  const activeMenu = false;
-  useEffect(() => {}, []);
+  const activeMenu = true;
 
   return (
     <div>
@@ -50,7 +50,7 @@ const App = () => {
             </div>
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg">
-              <Sidebar />
+              <></>
             </div>
           )}
           <div
@@ -75,17 +75,21 @@ const App = () => {
               <Route path="/kanban" element={<Kanban />} />
               <Route path="/editor" element={<Editor />} />
               <Route path="/calendar" element={<Calendar />} />
-              <Route path="/color-theme" element={<Themes />} />
+              <Route path="/color-theme" element={<ColorTheme />} />
 
-              <Route path="/line" element={<></>} />
-              <Route path="/area" element={<></>} />
-              <Route path="/bar" element={<></>} />
-              <Route path="/pie" element={<></>} />
-              <Route path="/financial" element={<></>} />
-              <Route path="/color-mapping" element={<></>} />
-              <Route path="/pyramid" element={<></>} />
-              <Route path="/stacked" element={<></>} />
+              <Route path="/line" element={<Line />} />
+              <Route path="/area" element={<Area />} />
+              <Route path="/bar" element={<Bar />} />
+              <Route path="/pie" element={< PieChart/>} />
+              <Route path="/financial" element={<Financial />} />
+              <Route path="/color-mapping" element={<ColorMapping />} />
+              <Route path="/pyramid" element={<Pyramid />} />
+              <Route path="/stacked" element={<Stacked />} />
             </Routes>
+          </div>
+
+          <div>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
