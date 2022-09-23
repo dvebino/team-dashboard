@@ -37,7 +37,7 @@ const App = () => {
                 type="button"
                 className="text-3xl p-3 hover: drop-shadow-xl hover:bg-light-gray text-white"
                 style={{
-                  background: "blue",
+                  background: "lightgray",
                   borderRadius: "50%",
                 }}
               >
@@ -89,9 +89,9 @@ const App = () => {
             </Routes>
           </div>
 
-          <div>
+          {/* <div>
             <Footer />
-          </div>
+          </div> */}
         </div>
       </BrowserRouter>
     </div>
