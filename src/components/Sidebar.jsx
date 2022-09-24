@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { SiShopware } from "react-icons/si";
+import { RiAdminFill } from "react-icons/ri";
 import { MdOutlineCancel } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { links } from "../data/dummy";
@@ -28,8 +28,8 @@ function Sidebar() {
               onClick={handleSidebar}
               className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900"
             >
-              <SiShopware />
-              <span>Dashboard</span>
+              <RiAdminFill />
+              <span>Admin Dashboard</span>
             </Link>
             <TooltipComponent content="Close Sidebar" position="BottomCenter" opensOn="Hover">
               <button
