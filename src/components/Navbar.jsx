@@ -55,14 +55,14 @@ function Navbar() {
         />
         <NavButton
           title="Notification"
-          dotColor="yellow"
+          dotColor="red"
           func={() => handleClick("notification")}
           color="black"
           icon={<RiNotification3Line />}
         />
         <NavButton
           title="Chat"
-          dotColor="blue"
+          dotColor="red"
           func={() => handleClick("chat")}
           color="black"
           icon={<BsChatLeft />}
