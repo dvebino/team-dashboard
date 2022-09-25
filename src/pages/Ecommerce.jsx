@@ -93,18 +93,33 @@ function Ecommerce() {
                   </p>
                   <p className="text-gray-500 mt-1">Expense</p>
                 </div>
-                
+
                 <div className="mt-5">
                   <SparkLine 
-                    currentColor="blue"
+                    currentColor="teal"
                     id="line-sparkline"
                     type="Line"
                     height="80px"
                     width="250px"
                     data={SparklineAreaData}
-                    color="blue"
+                    color="black"
                   />
                 </div>
+                <div className="mt-10">
+                  <Button 
+                    color="white"
+                    bgColor="teal"
+                    text="Download Report"
+                    borderRadius={"10px"}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <Stacked 
+                  width="320px"
+                  height="360px"
+                />
               </div>
             </div>
           </div>
