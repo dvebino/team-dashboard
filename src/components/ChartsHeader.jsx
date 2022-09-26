@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-function ChartsHeader() {
+function ChartsHeader({ category, title }) {
   return (
-    <div>ChartsHeader</div>
-  )
+    <div className="mb-10">
+      <p className="text-gray-400">{category} Chart</p>
+      <p className="text-3xl font-extrabold tracking-tight text-slate-900">
+        {title}
+      </p>
+    </div>
+  );
 }
 
-export default ChartsHeader
+export default ChartsHeader;
