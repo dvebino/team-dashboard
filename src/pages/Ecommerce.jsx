@@ -17,7 +17,7 @@ function Ecommerce() {
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
-              <p>$USD</p>
+              <p>$85,000</p>
             </div>
           </div>
           <div className="mt-6">

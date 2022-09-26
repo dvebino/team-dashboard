@@ -5,7 +5,6 @@ import {
   ColumnDirective,
   Page,
   Search,
-  Edit,
   Inject,
   Toolbar
 } from "@syncfusion/ej2-react-grids";
