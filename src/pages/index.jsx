@@ -12,4 +12,3 @@ export { default as Line } from './Charts/Line';
 export { default as PieChart } from './Charts/PieChart';
 export { default as Pyramid } from './Charts/Pyramid';
 export { default as Stacked } from './Charts/Stacked';
-export { default as Home } from './Home';

@@ -18,7 +18,6 @@ import {
   Financial,
   ColorMapping,
   ColorTheme,
-  Editor,
   Line,
 } from "./pages";
 import "./App.css";
@@ -73,9 +72,7 @@ const App = () => {
                 <Route path="/customers" element={<Customers />} />
 
                 <Route path="/kanban" element={<Kanban />} />
-                <Route path="/editor" element={<Editor />} />
                 <Route path="/calendar" element={<Calendar />} />
-                <Route path="/color-theme" element={<ColorTheme />} />
 
                 <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
