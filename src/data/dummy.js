@@ -264,19 +264,19 @@ export const areaCustomSeries = [
 
 export const barChartData = [
   [
-    { x: "USA", y: 46 },
-    { x: "GBR", y: 27 },
-    { x: "CHN", y: 26 },
+    { x: "Nancy Davolio", y: 46 },
+    { x: "Omar Darobe", y: 27 },
+    { x: "Miron Vitold", y: 26 },
   ],
   [
-    { x: "USA", y: 37 },
-    { x: "GBR", y: 23 },
-    { x: "CHN", y: 18 },
+    { x: "Nancy Davolio", y: 37 },
+    { x: "Omar Darobe", y: 43 },
+    { x: "Miron Vitold", y: 22 },
   ],
   [
-    { x: "USA", y: 38 },
-    { x: "GBR", y: 17 },
-    { x: "CHN", y: 26 },
+    { x: "Nancy Davolio", y: 68 },
+    { x: "Omar Darobe", y: 40 },
+    { x: "Miron Vitold", y: 35 },
   ],
 ];
 
@@ -285,7 +285,7 @@ export const barCustomSeries = [
     dataSource: barChartData[0],
     xName: "x",
     yName: "y",
-    name: "Gold",
+    name: "1st",
     type: "Column",
     marker: {
       dataLabel: {
@@ -299,7 +299,7 @@ export const barCustomSeries = [
     dataSource: barChartData[1],
     xName: "x",
     yName: "y",
-    name: "Silver",
+    name: "2nd",
     type: "Column",
     marker: {
       dataLabel: {
@@ -313,7 +313,7 @@ export const barCustomSeries = [
     dataSource: barChartData[2],
     xName: "x",
     yName: "y",
-    name: "Bronze",
+    name: "3rd",
     type: "Column",
     marker: {
       dataLabel: {
@@ -643,7 +643,7 @@ export const earningData = [
   },
   {
     icon: <FiBarChart />,
-    amount: "423,39",
+    amount: "423,390",
     percentage: "+38%",
     title: "Sales",
     iconColor: "rgb(228, 106, 118)",

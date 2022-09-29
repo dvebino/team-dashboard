@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { FiShoppingCart } from "react-icons/fi";
+import { FiSettings } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
-import { RiNotification3Line } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import { Cart, Chat, Notification, UserProfile } from "./";
+import { Chat, Notification } from "./";
 import { useStateContext } from "../contexts/ContextProvider";
 import { CgUser } from "react-icons/cg";
 
@@ -14,10 +13,10 @@ function Navbar() {
     activeMenu,
     setActiveMenu,
     isClicked,
-    setIsClicked,
     handleClick,
     screenSize,
     setScreenSize,
+    setThemeSettings,
   } = useStateContext();
 
   useEffect(() => {
@@ -31,7 +30,7 @@ function Navbar() {
   useEffect(() => {
     if (screenSize <= 900) setActiveMenu(false);
     else setActiveMenu(true);
-  }, [screenSize]);
+  }, [screenSize, setActiveMenu]);
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
@@ -48,17 +47,10 @@ function Navbar() {
 
       <div className="flex">
         <NavButton
-          title="Cart"
-          func={() => handleClick("cart")}
+          title="Settings"
+          func={() => setThemeSettings(true)}
           color="black"
-          icon={<FiShoppingCart />}
-        />
-        <NavButton
-          title="Notification"
-          dotColor="red"
-          func={() => handleClick("notification")}
-          color="black"
-          icon={<RiNotification3Line />}
+          icon={<FiSettings />}
         />
         <NavButton
           title="Chat"
@@ -67,21 +59,19 @@ function Navbar() {
           color="black"
           icon={<BsChatLeft />}
         />
-        <TooltipComponent content="Profile" position="BottomCenter">
+        <TooltipComponent content='Notifications'>
           <div
-            className="flex items-center gap-2 cursor-pointer p-2 hover:bg-teal-300 text-xl rounded"
-            onClick={() => handleClick("userProfile")}
+            className="flex items-center gap-2 cursor-pointer p-2 text-xl rounded"
+            onClick={() => handleClick("notification")}
           >
             <CgUser />
             <p>
-              <span>Welcome, </span> <span>User</span>
+              <span>Welcome, User!</span>
             </p>
             <MdKeyboardArrowDown />
           </div>
         </TooltipComponent>
-        {isClicked.cart && <Cart />}
         {isClicked.chat && <Chat />}
-        {isClicked.userProfile && <UserProfile />}
         {isClicked.notification && <Notification />}
       </div>
     </div>
@@ -95,7 +85,7 @@ const NavButton = ({ title, func, icon, color, dotColor }) => {
         type="button"
         onClick={func}
         style={{ color }}
-        className="relative text-xl rounded-full p-3 hover:bg-teal-300"
+        className="relative text-xl rounded-full p-3 hover:bg-teal-500"
       >
         <span
           style={{ background: dotColor }}

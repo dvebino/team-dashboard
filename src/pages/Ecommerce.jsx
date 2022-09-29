@@ -1,23 +1,20 @@
 import React from "react";
-import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
-import { Stacked, PieChart, Button, SparkLine } from "../components";
+import { Stacked, Button, SparkLine } from "../components";
 import {
   earningData,
   SparklineAreaData,
-  ecomPieChartData,
 } from "../data/dummy";
-import { useStateContext } from "../contexts/ContextProvider";
 
 function Ecommerce() {
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-no-wrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-45 p-8 pt-9 m-3 bg-hero-pattern bg-no-repat bg-cover bg-center">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-55 rounded-xl w-full lg:w-45 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-right">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-gray-400">Earnings</p>
-              <p>$85,000</p>
+              <p className="font-bold text-gray-600 text-3xl">Earnings</p>
+              <p className="font-semibold text-xl text-gray-600">$85,000</p>
             </div>
           </div>
           <div className="mt-6">
@@ -67,7 +64,7 @@ function Ecommerce() {
                   <span>Expense</span>
                 </p>
 
-                <p className="flex items-center gap-2 text-green-600 hover:drop-shadow-xl">
+                <p className="flex items-center gap-2 text-teal-500 hover:drop-shadow-xl">
                   <span>
                     <GoPrimitiveDot />
                   </span>
@@ -95,7 +92,7 @@ function Ecommerce() {
                 </div>
 
                 <div className="mt-5">
-                  <SparkLine 
+                  <SparkLine
                     currentColor="teal"
                     id="line-sparkline"
                     type="Line"
@@ -106,7 +103,7 @@ function Ecommerce() {
                   />
                 </div>
                 <div className="mt-10">
-                  <Button 
+                  <Button
                     color="white"
                     bgColor="teal"
                     text="Download Report"
@@ -116,10 +113,7 @@ function Ecommerce() {
               </div>
 
               <div>
-                <Stacked 
-                  width="320px"
-                  height="360px"
-                />
+                <Stacked width="320px" height="360px" />
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern':
-          "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+          "url('https://img.freepik.com/free-vector/company-employees-planning-task-brainstorming_74855-6316.jpg?w=900&t=st=1664210668~exp=1664211268~hmac=7e00e0a523f647ff7910c2cba836fc27e2f414f074678a37e1c95356f6397893')",
       },
     },
   },
