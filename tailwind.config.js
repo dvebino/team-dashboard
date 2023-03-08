@@ -2,19 +2,15 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
   theme: {
-    fontFamily: {
-      display: ['Open Sans', 'sans-serif'],
-      body: ['Open Sans', 'sans-serif'],
-    },
     extend: {
       fontSize: {
         14: '14px',
       },
       backgroundColor: {
         'main-bg': '#FAFBFB',
-        'main-dark-bg': '#20232A',
+        'main-dark-bg': '#474a52',
         'secondary-dark-bg': '#33373E',
-        'light-gray': '#F7F7F7',
+        'light-gray': '#f2f2f2',
         'half-transparent': 'rgba(0, 0, 0, 0.5)',
       },
       borderWidth: {

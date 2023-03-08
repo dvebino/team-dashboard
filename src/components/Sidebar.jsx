@@ -2,7 +2,6 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { RiAdminFill } from "react-icons/ri";
 import { MdOutlineCancel } from "react-icons/md";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { links } from "../data/dummy";
 import { useStateContext } from '../contexts/ContextProvider';
 
@@ -14,9 +13,9 @@ function Sidebar() {
   }
 
   const activeLink =
-    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-black bg-light-gray text-md m-2";
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-md text-black bg-light-gray text-md m-2";
   const normalLink =
-    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-teal-500 m-2";
+    "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-md text-white text-md text-gray-700 dark:text-gray-200 m-2 transform transition duration-200 hover:scale-110";
 
   return (
     <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 bg-gray">
@@ -31,15 +30,13 @@ function Sidebar() {
               <RiAdminFill />
               <span>Admin Dashboard</span>
             </Link>
-            <TooltipComponent content="Close Sidebar" position="BottomCenter" opensOn="Hover">
-              <button
-                type="button"
-                onClick={() => setActiveMenu((prevState) => !prevState)}
-                className="text-xl rounded-full p-3 hover:bg-teal-500 mt-4 block"
-              >
-                <MdOutlineCancel/>
-              </button>
-            </TooltipComponent>
+            <button
+              type="button"
+              onClick={() => setActiveMenu((prevState) => !prevState)}
+              className="text-2xl p-3 mt-4 block transform transition duration-300 hover:scale-150"
+            >
+              <MdOutlineCancel/>
+            </button>
           </div>
           <div className="mt-10">
             {links.map((item) => (

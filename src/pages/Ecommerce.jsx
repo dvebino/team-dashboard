@@ -28,11 +28,11 @@ function Ecommerce() {
           </div>
         </div>
 
-        <div className="flex m-3 flex-wrap justify-center gap-3 items-center">
+        <div className="flex m-3 flex-wrap justify-center gap-8 items-center">
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
+              className="bg-white dark:text-gray-200 md:w-60 p-4 pt-6 border-1 border-gray-400 rounded-md transform transition duration-400 hover:scale-110"
             >
               <button
                 type="button"
@@ -53,7 +53,7 @@ function Ecommerce() {
         </div>
 
         <div className="flex gap-10 flex-wrap justify-center">
-          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md: w-780">
+          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-6 border-1 border-gray-400 rounded-xl md: w-780">
             <div className="flex justify-between">
               <p className="font-semibold text-xl">Revenue Updates</p>
               <div className="flex items-center gap-4">

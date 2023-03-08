@@ -1,9 +1,12 @@
-@import url('https://fonts.googeapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: "Neue";
+    src: url("../public/fonts/PPNeueMontreal-Medium.otf");
+}
 
 body {
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Neue";
 }
 
 @tailwind base;

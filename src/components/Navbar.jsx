@@ -17,6 +17,7 @@ function Navbar() {
     screenSize,
     setScreenSize,
     setThemeSettings,
+    currentMode
   } = useStateContext();
 
   useEffect(() => {
@@ -45,22 +46,19 @@ function Navbar() {
         <div></div>
       )}
 
-      <div className="flex">
+      <div className={`flex ${currentMode === "Dark" ? "text-white" : "text-black"}`}>
         <NavButton
           title="Settings"
           func={() => setThemeSettings(true)}
-          color="black"
           icon={<FiSettings />}
         />
         <NavButton
           title="Chat"
           dotColor="red"
           func={() => handleClick("chat")}
-          color="black"
           icon={<BsChatLeft />}
         />
-        <TooltipComponent content='Notifications'>
-          <div
+        <div
             className="flex items-center gap-2 cursor-pointer p-2 text-xl rounded"
             onClick={() => handleClick("notification")}
           >
@@ -70,7 +68,6 @@ function Navbar() {
             </p>
             <MdKeyboardArrowDown />
           </div>
-        </TooltipComponent>
         {isClicked.chat && <Chat />}
         {isClicked.notification && <Notification />}
       </div>
@@ -80,7 +77,7 @@ function Navbar() {
 
 const NavButton = ({ title, func, icon, color, dotColor }) => {
   return (
-    <TooltipComponent content={title} position="BottomCenter" opensOn="Hover">
+    <TooltipComponent content={title} position="BottomCenter" opensOn="Hover" width="100px" height="45px" animation={{open: {effect:"FadeIn", duration: 500, delay: 0}}}>
       <button
         type="button"
         onClick={func}
